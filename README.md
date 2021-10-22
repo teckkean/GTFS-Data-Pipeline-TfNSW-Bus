@@ -8,9 +8,9 @@ Project Title: Smart City Applications in Land Use and Transport (SCALUT)
 * [GTFS Static](#gtfs-static)
 * [GTFS Realtime Trip Update](#gtfs-realtime-trip-update)
   - Convert Trip Update .PB file to CSV
-* [GTFS Realtime Vehicle Positions](#gtfs-realtime-vehicle-positions)
+* [GTFS Realtime Vehicle Position](#gtfs-realtime-vehicle-position)
   - Convert Vehicle Positions .PB file to CSV
-* [GTFS Realtime Alerts](#gtfs-realtime-alerts)
+* [GTFS Realtime Service Alert](#gtfs-realtime-alert)
 
 # GTFS Static
 
