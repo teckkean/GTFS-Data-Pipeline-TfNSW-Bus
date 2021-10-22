@@ -1,4 +1,7 @@
 # GTFS Data Pipeline (TfNSW Bus Datasets)
+![Pipeline](GTFS_TfNSW_Bus_Data_Pipeline_v211023.png)
+
+## Overview
 
 This is a data pipeline developed as part of a PhD research project at the University of Sydney's TransportLab.
 
@@ -10,13 +13,8 @@ Project Title: Smart City Applications in Land Use and Transport (SCALUT)
   - Convert Trip Update .PB file to CSV
 * [GTFS Realtime Vehicle Position](#gtfs-realtime-vehicle-position)
   - Convert Vehicle Positions .PB file to CSV
-* [GTFS Realtime Service Alert](#gtfs-realtime-alert)
+* [GTFS Realtime Service Alert](#gtfs-realtime-service-alert)
 
-## Overview
-![Test Image 3](media/GTFS_TfNSW_Bus_Data_Pipeline_v211023.png)
-
-## Overview2
-[![image](media/GTFS_TfNSW_Bus_Data_Pipeline_v211023.png)]
 
 ## GTFS Static
 
