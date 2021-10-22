@@ -1,4 +1,4 @@
-# TfNSW GTFS Bus Data Pipeline
+# GTFS Data Pipeline (TfNSW Bus Datasets)
 
 This is a data pipeline developed as part of a PhD research project at the University of Sydney's TransportLab.
 
@@ -16,10 +16,10 @@ Project Title: Smart City Applications in Land Use and Transport (SCALUT)
 
 # GTFS Realtime Trip Update
 
-# GTFS Realtime Vehicle Positions
+# GTFS Realtime Vehicle Position
 
-# GTFS Realtime Alerts
-
+# GTFS Realtime Service Alert
+Out of scope
 
 
 
