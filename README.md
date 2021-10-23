@@ -1,3 +1,4 @@
+[![DOI](https://zenodo.org/badge/383683218.svg)](https://zenodo.org/badge/latestdoi/383683218)
 # GTFS Data Pipeline for TfNSW Bus Datasets
 ![Pipeline](GTFS_TfNSW_Bus_Data_Pipeline_v211023.png)
 
@@ -22,7 +23,9 @@ This is a data pipeline developed as part of the PhD research project, SCALUT, a
 
 The datasets generated using this pipeline has been used to validate the performance of TfNSW's Transit Signal Priority Request via Public Transport Information and Priority System (PTIPS).
 
-The data pipeline is written in Python and has been tested to work on Windows, Linux and Mac using the Version 1 GTFS TfNSW Bus Datasets.
+The data pipeline is written in Python and has been tested to work on Windows, Linux and Mac using the Version 1 GTFS TfNSW Bus Datasets. 
+
+*Note: A seperate data pipeline is currently being developed and tested to work with a wider collection of GTFS datasets.*
 
 ## Data Availability Statement
 
