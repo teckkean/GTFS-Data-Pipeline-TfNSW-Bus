@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "Please consider to cite this work using the metadata provided below."
+authors:
+- family-names: "Chin"
+  given-names: "Teck Kean"
+  orcid: "https://orcid.org/0000-0003-1223-6822"
+- family-names: "Marks"
+  given-names: "Benjy"
+  orcid: "https://orcid.org/0000-0003-2928-9349"
+- family-names: "Moylan"
+  given-names: "Emily"
+  orcid: "https://orcid.org/0000-0003-1680-6407"
+title: "GTFS Data Pipeline for TfNSW Bus Datasets"
+version: 1.0.0
+doi: 10.5281/zenodo.5594397
+date-released: 2021-10-24
+url: "https://github.com/teckkean/GTFS-Data-Pipeline-TfNSW-Bus"
