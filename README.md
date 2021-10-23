@@ -7,12 +7,11 @@
 * [Introduction](#introduction)
 * [Data Availability Statement](#data-availability-statement)
 * [Data Pipeline Directory Structure](#data-pipeline-directory-structure)
-* [GTFS Static](#gtfs-static)
-* [GTFS Realtime Trip Update](#gtfs-realtime-trip-update)
-  - Convert Trip Update .PB file to CSV
-* [GTFS Realtime Vehicle Position](#gtfs-realtime-vehicle-position)
-  - Convert Vehicle Positions .PB file to CSV
-* [GTFS Realtime Service Alert](#gtfs-realtime-service-alert)
+* [Data Pipeline Operations](#data-pipeline-operations)
+  - 1.1 Convert .PB.GZ to .CSV Files
+  - 1.2 Transform .CSV Files
+  - 1.2A Transform .CSV Files by Agency (Daily to Monthly)
+  - 1.3 Prepare Cleaned Unique Datasets
 
 
 ## Introduction
@@ -27,15 +26,17 @@ The data pipeline is written in Python and has been tested to work on Windows, L
 
 *Note: A seperate data pipeline is currently being developed and tested to work with a wider collection of GTFS datasets.*
 
+
 ## Data Availability Statement
 
 The datasets generated will be made available to public on the University of Sydney Data Repository. 
 
 On-going static and realtime datasets are available on the Transport for NSW Open Data Hub:
 * GTFS Static Datasets: https://opendata.transport.nsw.gov.au/dataset/timetables-complete-gtfs
-* GTFS Realtime Datasets: 
-  * Trip Update v1 - https://opendata.transport.nsw.gov.au/dataset/public-transport-realtime-trip-update
-  * Vehicle Position v1 - https://opendata.transport.nsw.gov.au/dataset/public-transport-realtime-vehicle-positions
+* GTFS Realtime v1 Datasets: 
+  - Trip Update - https://opendata.transport.nsw.gov.au/dataset/public-transport-realtime-trip-update
+  - Vehicle Position - https://opendata.transport.nsw.gov.au/dataset/public-transport-realtime-vehicle-positions
+
 
 ## Data Pipeline Directory Structure
 ```
@@ -72,15 +73,23 @@ GTFS_TfNSW_Bus_DataWareHouse
     └───FileTP
 ```
 
-## GTFS Static
 
-## GTFS Realtime Trip Update
-
-## GTFS Realtime Vehicle Position
-
-## GTFS Realtime Service Alert
-Out of scope
-
-
-
-
+## Data Pipeline Operations
+**1.1 Convert .PB.GZ to .CSV Files**
+```
+SCALUT_DPL_TfNSW_GTFS-R_Bus_11_TU_PBtoCSV_v02A.py
+SCALUT_DPL_TfNSW_GTFS-R_Bus_11_VP_PBtoCSV_v02A.py
+```
+**1.2 Transform .CSV Files**
+```
+SCALUT_DPL_TfNSW_GTFS-R_Bus_12_TU_Transform_v03.py
+SCALUT_DPL_TfNSW_GTFS-R_Bus_12_VP_Transform_v02.py
+```
+**1.2A Transform .CSV Files by Agency (Daily to Monthly)**
+```
+SCALUT_DPL_TfNSW_GTFS-R_Bus_12A_VP_Transform_v01_byAgency.py
+```
+**1.3 Prepare Cleaned Unique Datasets**
+```
+SCALUT_DPL_TfNSW_GTFS-R_Bus_13_TU_ClnUnique_v02_byAgency.py
+```
