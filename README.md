@@ -80,6 +80,8 @@ GTFS_TfNSW_Bus_DataWareHouse
 SCALUT_DPL_TfNSW_GTFS-R_Bus_11_TU_PBtoCSV_v02A.py
 SCALUT_DPL_TfNSW_GTFS-R_Bus_11_VP_PBtoCSV_v02A.py
 ```
+Note: The *tfnsw_gtfs_realtime_pb2.py* file is required to store in the same folder.
+
 **1.2 Transform .CSV Files**
 ```
 SCALUT_DPL_TfNSW_GTFS-R_Bus_12_TU_Transform_v03.py
