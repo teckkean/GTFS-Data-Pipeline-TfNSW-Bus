@@ -75,7 +75,7 @@ GTFS_TfNSW_Bus_DataWareHouse
 
 
 ## Data Pipeline Operations
-**1.1 Convert .PB.GZ to .CSV Files**
+**1.1 Convert .PB.GZ (Gzipped Protocol Buffer) to .CSV Files**
 ```
 SCALUT_DPL_TfNSW_GTFS-R_Bus_11_TU_PBtoCSV_v02A.py
 SCALUT_DPL_TfNSW_GTFS-R_Bus_11_VP_PBtoCSV_v02A.py
