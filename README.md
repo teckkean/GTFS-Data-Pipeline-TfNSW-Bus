@@ -18,22 +18,28 @@
 
 **PhD Research Project Title:** Smart City Applications in Land Use and Transport (SCALUT)
 
-This is a data pipeline developed as part of the PhD research project, SCALUT, at the University of Sydney's TransportLab. 
+This is a data pipeline developed as part of the PhD research project, SCALUT, at the University of Sydney's TransportLab.
 
 The datasets generated using this pipeline has been used to validate the performance of TfNSW's Transit Signal Priority Request via Public Transport Information and Priority System (PTIPS).
 
-The data pipeline is written in Python and has been tested to work on Windows, Linux and Mac using the Version 1 GTFS TfNSW Bus Datasets. 
+The data pipeline is written in Python and has been tested to work on Windows, Linux and Mac using the Version 1 GTFS TfNSW Bus Datasets.
 
 *Note: A seperate data pipeline is currently being developed and tested to work with a wider collection of GTFS datasets.*
 
+## Installation
+You can either download this file (or clone it) from Github, or you can install via pip with
+
+```
+pip install gtfs_dpl
+```
 
 ## Data Availability Statement
 
-The datasets generated will be made available to public on the University of Sydney Data Repository. 
+The datasets generated will be made available to public on the University of Sydney Data Repository.
 
 On-going static and realtime datasets are available on the Transport for NSW Open Data Hub:
 * GTFS Static Datasets: https://opendata.transport.nsw.gov.au/dataset/timetables-complete-gtfs
-* GTFS Realtime v1 Datasets: 
+* GTFS Realtime v1 Datasets:
   - Trip Update - https://opendata.transport.nsw.gov.au/dataset/public-transport-realtime-trip-update
   - Vehicle Position - https://opendata.transport.nsw.gov.au/dataset/public-transport-realtime-vehicle-positions
 
@@ -73,25 +79,42 @@ GTFS_TfNSW_Bus_DataWareHouse
     └───FileTP
 ```
 
-
-## Data Pipeline Operations
+## Usage instructions
 **1.1 Convert .PB.GZ (Gzipped Protocol Buffer) to .CSV Files**
 ```
-SCALUT_DPL_TfNSW_GTFS-R_Bus_11_TU_PBtoCSV_v02A.py
-SCALUT_DPL_TfNSW_GTFS-R_Bus_11_VP_PBtoCSV_v02A.py
+python TU_PBtoCSV.py <DataDir> <FileTP>
+python VP_PBtoCSV.py <DataDir> <FileTP>
 ```
-Note: The *tfnsw_gtfs_realtime_pb2.py* file is required to store in the same folder.
+Note: The *tfnsw_gtfs_realtime_pb2.py* file is required to be stored in the same folder.
 
 **1.2 Transform .CSV Files**
 ```
-SCALUT_DPL_TfNSW_GTFS-R_Bus_12_TU_Transform_v03.py
-SCALUT_DPL_TfNSW_GTFS-R_Bus_12_VP_Transform_v02.py
+python TU_Transform.py <DataDir> <FileTP> <FileIdStatic>
+python VP_Transform.py <DataDir> <FileTP>
 ```
 **1.2A Transform .CSV Files by Agency (Daily to Monthly)**
 ```
-SCALUT_DPL_TfNSW_GTFS-R_Bus_12A_VP_Transform_v01_byAgency.py
+python VP_Transform_byAgency.py <DataDir> <FileTP> <FileIdStatic> <DaysInMonth> <Flt_Agency>
 ```
 **1.3 Prepare Cleaned Unique Datasets**
 ```
-SCALUT_DPL_TfNSW_GTFS-R_Bus_13_TU_ClnUnique_v02_byAgency.py
+python TU_ClnUnique_byAgency.py <DataDir> <FileTP> <FileIdStatic> <DaysInMonth> <Flt_Agency>
+```
+
+## Usage example
+The package comes with some data for you to explore. If you installed the package via `pip` you can find the path to the data with the following command under the category "Location":
+
+```
+pip show gtfs_dpl
+```
+
+To process the example data included with the package, you can run:
+
+```
+python TU_PBtoCSV.py /path/to/gtfs_dpl/example_data/ <FileTP>
+python VP_PBtoCSV.py /path/to/gtfs_dpl/example_data/ <FileTP>
+python TU_Transform.py /path/to/gtfs_dpl/example_data/ <FileTP> <FileIdStatic>
+python VP_Transform.py /path/to/gtfs_dpl/example_data/<FileTP>
+python VP_Transform_byAgency.py /path/to/gtfs_dpl/example_data/ <FileTP> <FileIdStatic> <DaysInMonth> <Flt_Agency>
+python TU_ClnUnique_byAgency.py /path/to/gtfs_dpl/example_data/ <FileTP> <FileIdStatic> <DaysInMonth> <Flt_Agency>
 ```
