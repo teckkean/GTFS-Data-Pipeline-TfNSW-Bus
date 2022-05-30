@@ -51,7 +51,7 @@ def Df_SchArrTime(df_NoROT1):
 
 #################################################
 ## Get Stop Sequence from GTFS Static
-def Df_GetStaticStopSeq(df_NoROT1, df_StTimes):
+def Df_GetStaticStopSeq(df_NoROT1):
     df_NoROT2 = pd.merge(df_NoROT1,
                          df_StTimes[['trip_id','arrival_time','stop_id','stop_sequence']],
                          how='left',
@@ -75,7 +75,7 @@ def Df_GetStaticStopSeq(df_NoROT1, df_StTimes):
 
 #################################################
 ## Get shape_dist_traveled from GTFS Static
-def Df_GetStaticDist(df_NoROT2, df_StTimes):
+def Df_GetStaticDist(df_NoROT2):
     df_NoROT3 = pd.merge(df_NoROT2,
                          df_StTimes[['trip_id','stop_id','stop_sequence','shape_dist_traveled']],
                          how='left',
