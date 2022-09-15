@@ -53,7 +53,7 @@ GTFS_TfNSW_Bus_DataWareHouse
 ├───tu_transform_csv_folder
 ├───tu_merge_csv
 ├───tu_all_steps
-├───tu_all_steps_folder
+└───tu_all_steps_folder
 ```
 
 ## Usage instructions
