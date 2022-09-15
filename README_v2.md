@@ -90,8 +90,8 @@ The code in this step requires the following folder arrangement as input:
 
 Example:
 ```
-.../10_raw_pb_tu/2020_06/gtfs_tu_2020_06_01/files # 2.1 tu_pb_to_csv input
-.../11_raw_csv_tu/2020_06/gtfs_tu_2020_06_01/files # 2.2 tu_transform_csv input
+.../10_raw_pb_tu/2020_06/gtfs_tu_2020_06_01/ # 2.1 tu_pb_to_csv input
+.../11_raw_csv_tu/2020_06/gtfs_tu_2020_06_01/ # 2.2 tu_transform_csv input
 .../12_csv_transformed_tu/2020_06/gtfs_tu_2020_06_01/files # 2.3 tu_merge_csv input
 .../12_daily_tu/2020_06/gtfs_tu_2020_06_01_all.csv.gz # 2.3 tu_merge_csv output
 ```
