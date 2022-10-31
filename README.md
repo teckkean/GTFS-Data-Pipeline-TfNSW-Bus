@@ -16,9 +16,9 @@
 
 ## Introduction
 
-**PhD Research Project Title:** Smart City Applications in Land Use and Transport (SCALUT)
+**Research Project Title:** Smart City Applications in Land Use and Transport (SCALUT)
 
-This is a data pipeline developed as part of the PhD research project, SCALUT, at the University of Sydney's TransportLab.
+This is a data pipeline developed as part of the research project, SCALUT, at the University of Sydney's TransportLab.
 
 The datasets generated using this pipeline has been used to validate the performance of TfNSW's Transit Signal Priority Request via Public Transport Information and Priority System (PTIPS).
 
